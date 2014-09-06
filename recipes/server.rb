@@ -12,3 +12,4 @@ template "/etc/logstash/conf.d/server.conf" do
   variables( :config => node[:logstash][:server] )
   notifies :restart, "service[logstash]"
 end
+execute "chmod 755 /etc/logstash/conf.d/server.conf"
