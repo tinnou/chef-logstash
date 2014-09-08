@@ -15,6 +15,9 @@ template "/etc/logstash/conf.d/agent.conf" do
   group "logstash"
   mode "0644"
 end
+
+log("Another line of log: ANTOINE") { level :warn }
+
 file "/etc/logstash/conf.d/agent.conf" do
   owner "logstash"
   group "logstash"
