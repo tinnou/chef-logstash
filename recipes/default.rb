@@ -10,6 +10,8 @@
 include_recipe "logstash::yumrepo" if platform_family? "rhel", "fedora"
 include_recipe "logstash::apt"     if platform_family? "debian"
 
+log("Just a simple line of log: ANTOINE") { level :warn }
+
 directory "/etc/logstash" do
   owner "logstash"
   group "logstash"
