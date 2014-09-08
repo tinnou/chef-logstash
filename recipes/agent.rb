@@ -7,7 +7,7 @@
 # License: MIT
 #
 
-log("Another line of log: ANTOINE") { level :warn }
+log("Another line of log: ANTOINE3") { level :warn }
 
 template "/etc/logstash/conf.d/agent.conf" do
   source "logstash.conf.erb"
@@ -18,7 +18,7 @@ template "/etc/logstash/conf.d/agent.conf" do
   mode 0644
 end
 
-log("Another line of log: ANTOINE") { level :warn }
+log("Another line of log: ANTOINE4") { level :warn }
 
 file "/etc/logstash/conf.d/agent.conf" do
   owner "logstash"
