@@ -13,5 +13,13 @@ template "/etc/logstash/conf.d/agent.conf" do
   notifies :restart, "service[logstash]"
 end
 file "/etc/logstash/conf.d/agent.conf" do
+  owner "logstash"
+  group "logstash"
   mode "0644"
+end
+file "/etc/logstash/conf.d/agent_test.conf" do
+  owner "logstash"
+  group "logstash"
+  mode "0644"
+  content "Some test content!"
 end
