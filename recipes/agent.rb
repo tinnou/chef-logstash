@@ -11,6 +11,9 @@ template "/etc/logstash/conf.d/agent.conf" do
   source "logstash.conf.erb"
   variables( :config => node[:logstash][:agent] )
   notifies :restart, "service[logstash]"
+  owner "logstash"
+  group "logstash"
+  mode "0644"
 end
 file "/etc/logstash/conf.d/agent.conf" do
   owner "logstash"
