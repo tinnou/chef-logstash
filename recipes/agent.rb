@@ -12,6 +12,6 @@ template "/etc/logstash/conf.d/agent.conf" do
   variables( :config => node[:logstash][:agent] )
   notifies :restart, "service[logstash]"
 end
-cookbook_file "/etc/logstash/conf.d/agent.conf" do
+file "/etc/logstash/conf.d/agent.conf" do
   mode "0644"
 end
