@@ -7,8 +7,6 @@
 # License: MIT
 #
 
-log("Another line of log: ANTOINE3") { level :warn }
-
 template "/etc/logstash/conf.d/agent.conf" do
   source "logstash.conf.erb"
   variables( :config => node[:logstash][:agent] )
